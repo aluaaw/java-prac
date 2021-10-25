@@ -1,0 +1,17 @@
+server:
+  port: 10303
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://${db-url}:${db-port}/${db-kungca}
+    username: ${db-user}
+    password: ${db-pw}
+  config:
+    activate:
+      on-profile: local
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update

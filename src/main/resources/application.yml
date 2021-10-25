@@ -1,0 +1,14 @@
+server:
+  port: 10303
+  version: 1.0.0
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: ${db-url}:${db-port}/${db-name}
+    username: ${db-user}
+    password: ${db-pw}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
