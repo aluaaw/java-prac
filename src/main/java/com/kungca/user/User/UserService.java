@@ -55,7 +55,7 @@ public class UserService {
 
     public void logout(HttpServletRequest request) {
         request.getSession().invalidate();
-        request.getSession();
+        //request.getSession();
     }
 
     public boolean checkSession(HttpServletRequest request) {
