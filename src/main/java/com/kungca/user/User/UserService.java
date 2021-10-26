@@ -41,9 +41,7 @@ public class UserService {
 
             } else {
                 HttpSession session = request.getSession();
-                if (!checkSession(request)) {
-                    session.setAttribute(USER_SPEC.USER_ID.getValue(), userInfo.getUserId());
-                }
+                session.setAttribute(USER_SPEC.USER_ID.getValue(), userInfo.getUserId());
                 session.setMaxInactiveInterval(maxTime);
             }
         }
@@ -57,7 +55,7 @@ public class UserService {
 
     public void logout(HttpServletRequest request) {
         request.getSession().invalidate();
-        // have to add one more method
+        request.getSession();
     }
 
     public boolean checkSession(HttpServletRequest request) {
