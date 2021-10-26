@@ -41,7 +41,9 @@ public class UserService {
 
             } else {
                 HttpSession session = request.getSession();
-                session.setAttribute(USER_SPEC.USER_ID.getValue(), userInfo.getUserId());
+                if (!checkSession(request)) {
+                    session.setAttribute(USER_SPEC.USER_ID.getValue(), userInfo.getUserId());
+                }
                 session.setMaxInactiveInterval(maxTime);
             }
         }

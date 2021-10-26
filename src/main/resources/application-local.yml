@@ -9,7 +9,7 @@ spring:
     password: ${db-pw}
   config:
     activate:
-      on-profile: local
+      on-profile: ${profile}
 
 
   jpa:
